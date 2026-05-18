@@ -122,20 +122,20 @@ loadings = pd.Series(fa.components_[0], index=variaveis_indice).sort_values(asce
 print("Loadings (Factor 1):")
 print(loadings)
 
-# opcional: pesos normalizados para percentagens (com sinal)
+
 weights_signed_pct = 100 * loadings / loadings.abs().sum()
 print("\nWeights (signed, % of abs sum):")
 print(weights_signed_pct)
 
-# opcional: importância em percentagem (sem sinal)
+
 weights_abs_pct = 100 * loadings.abs() / loadings.abs().sum()
 print("\nImportance (absolute, %):")
 print(weights_abs_pct)
 
-# 7. Adicionar o fator ao DataFrame original
+
 df["RSI_Fator1"] = fator_1
 
-# 8. Reescalar o índice RSI para o intervalo 0-100 (opcional)
+# 8. Scale
 df["RSI"] = (df["RSI_Fator1"] - df["RSI_Fator1"].min()) / (df["RSI_Fator1"].max() - df["RSI_Fator1"].min()) * 100
 
 # 9. Visualizar os resultados
