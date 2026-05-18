@@ -128,6 +128,5 @@ RSI-Dashboard/
 ├── data/                 # Input and processed datasets
 ├── scripts/              # Python scripts for data processing and analysis
 ├── dashboard/            # Power BI dashboard files
-├── outputs/              # Final results, maps, and exported figures
 ├── docs/                 # Thesis-related documentation
 └── README.md             # Project documentation
